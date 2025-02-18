@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Log in</title>
+    <style>
+        /* General Styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #6B3A1E;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #6B3A1E;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: beige;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .header-img {
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .solidarity-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: #6B3A1E;
+            text-transform: uppercase;
+        }
+
+        .palestine {
+            display: inline-block;
+        }
+
+        .black {
+            color: black;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .chocolate {
+            color: #6B3A1E;
+        }
+
+        .BY {
+            color: #6B3A1E;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* Navigation Styling */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            padding: 0 50px;
+        }
+
+        .nav-right a {
+            color: #6B3A1E;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-right a:hover {
+            background-color:#6B3A1E;
+            border-radius: 5px;
+        }
+
+        /* Login Form Styling */
+        .login-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 50px;
+            text-align: center;
+            margin: 80px auto;
+            background-color: beige;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: 30px;
+        }
+        .login{
+            color: #6B3A1E;
+            font-family:'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            text-decoration: solid;
+            font-size: 30px;
+        }
+
+        .tab.active {
+            border-bottom: 2px solid black;
+        }
+
+        .login-form {
+            display: none;
+        }
+
+        .login-form.active {
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #333;
+        }
+
+        .facebook-btn {
+            background: #3b5998;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .facebook-btn:hover {
+            background: #2d4373;
+        }
+
+        .small-text {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .top-bar-item {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <div class="header-container">
+            <!-- Left Side: Logo & Text -->
+            <div class="header-left">
+                <img src="logoo.jpg" class="header-img">
+                <div class="solidarity-text">
+                    <span class="chocolate">SOLIDARITY CAMPAIGN FOR </span>
+                    <span class="palestine">
+                        <span class="white">P</span>
+                        <span class="white">A</span>
+                        <span class="red">L</span>
+                        <span class="red">E</span>
+                        <span class="black">S</span>
+                        <span class="black">T</span>
+                        <span class="black">I</span>
+                        <span class="green">N</span>
+                        <span class="green">E</span>
+                    </span>
+                    <br>
+                    <span class="BY">by A.B.T MOVEMENT </span>
+                </div>
+            </div>
+
+            <!-- Right Side: Navigation Links -->
+            <nav>
+                <div class="nav-right">
+                    <a href="homepage.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="Get involved.html">Get Involved</a>
+                    <a href="History Page.html">History</a>
+                    <a href="about.html">About us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <BR><BR><BR>
+
+    <!-- Login Form Section -->
+    <div class="login-container">
+        <div class="tab-container">
+            <div class="login" id="login"><strong>log in</strong></div>
+        </div>
+
+        <div class="login-form active" id="new-form">
+            <!-- Facebook Login Button -->
+            <button class="facebook-btn">Continue with Facebook</button>
+            <hr>
+
+            <!-- Email and Password Inputs -->
+            <input type="text" placeholder="Email Address">
+            <input type="password" placeholder="Password">
+
+            <!-- Terms and Conditions -->
+            <div class="small-text">By loging in your account, you agree to our Terms and Conditions & Privacy Policy.</div>
+
+            <!-- Sign Up Button -->
+            <button class="login-btn">LOG IN</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

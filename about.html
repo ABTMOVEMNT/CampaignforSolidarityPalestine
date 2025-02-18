@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>About us</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url("backgroundpic.png");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: white;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: top 0.3s;
+            background: #6B3A1E;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .header-img {
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .solidarity-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .palestine {
+            display: inline-block;
+        }
+
+        .black { color: black; }
+        .red { color: red; }
+        .white { color: white; }
+        .green { color: green; }
+        .BY { color:white; 
+            font-size:20px ;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;} 
+
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: 180px;
+        }
+
+        .search-box {
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            width: 180px;
+            max-width: 200px;
+        }
+
+        .search-btn {
+            background: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 12px;
+            margin-left: 5px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
+        .search-btn:hover {
+            background: #ddd;
+        }
+        .button-header a {
+            display: inline-block;
+            background: #c4794e; 
+            color: beige;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0px 4px 10px rgba(0.3, 0, 0, 0.2); /* Added shadow effect */
+        }
+
+        nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: beige;
+            padding: 10px;
+            z-index: 11;
+            justify-content: center;
+            transition: top 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+        }
+
+        nav a {
+            font-family: serif;
+            text-decoration: none;
+            color: chocolate;
+            margin: 0 15px;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            background: #555;
+            color: white;
+            border-radius: 5px;
+        }
+
+        section {
+            margin-top: 160px;
+            height: 2000px;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-container {
+                margin-top: 10px;
+            }
+        }
+        img{
+            border-radius:500px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-top: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        h2 {
+            font-size: 38px;
+            margin-top: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        h2 {
+            font-size: 30px;
+            margin-top: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        
+        hr {
+            width: 50%;
+            border: 1px solid black;
+            margin: 20px auto;
+        }
+        .quote {
+            font-style: italic;
+            margin: 20px 0;
+        }
+        p{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: larger;
+            
+        }
+        .color{
+            color: #6B3A1E;
+
+        }
+        
+        .masthead {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+   .masthead-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Adjust spacing between columns */
+}
+        .content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            
+        }
+        .content em {
+            font-style: italic;
+        }
+        .footer {
+            background: #1b1d21;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background: #d41920;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bbbbbb;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            transition: 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 8px;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            transition: 0.5s ease;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: #d41920;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            padding: 15px 0;
+            background: #111;
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="logoo.jpg" class="header-img">
+                <div class="solidarity-text">
+                    <span class="white">SOLIDARITY CAMPAIGN FOR </span>
+                    <span class="palestine">
+                        <span class="white">P</span>
+                        <span class="white">A</span>
+                        <span class="red">L</span>
+                        <span class="red">E</span>
+                        <span class="black">S</span>
+                        <span class="black">T</span>
+                        <span class="black">I</span>
+                        <span class="green">N</span>
+                        <span class="green">E</span>
+                    </span>
+                    <br>
+                    <span class="BY">by A.B.T MOVEMENT </span>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="button-header">
+                    <a href="Log In.html">LOG IN</a>
+                    <a href="Join Us.html">JOIN US</a>
+                </div>                                                         
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <a href="homepage.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="Get involved.html">Get Involved</a>
+        <a href="History Page.html">History</a>
+        <a href="about.html">About us</a><br><br>
+    </nav>
+
+    <section class="color">
+        <img src="Logo.jpg" width="250px">
+        <h1>A.B.T MOVEMENT</h1>
+        <h1>ABOUT</h1>
+        <hr>
+        <p class="quote">“The cause of labour is the hope of the world”<br>– Walter Crane, 1894</p>
+        <div class="content">
+            <strong><p><em>A.B.T MOVEMENT</em> was established in 2020 as a socialist magazine that would give voice to the popular front campaigns against the rising tide of fascism in Europe. For five years it has been at the heart of left-wing politics in Britain, counting giants of the labour movement like ainbatrisyazman and anushanair among its former editors.</p>
+
+                <p>Over the decades A.B.T MOVEMENT has campaigned for socialist ideals inside and outside parliament. It championed the cause of the Spanish Republic abroad and the National Health Service at home.A.B.T MOVEMENT Ain Batrisya wrote in its pages about the need to democratise culture, before going on to found the Open University as a pioneering Minister for the Arts.</p>
+                
+                <p>Barbara Castle was a columnist for many years, arguing for legal recognition of women’s equality before introducing the Equal Pay Act in 1970. A.B.T MOVEMENT also contributed to the struggle against apartheid in South Africa, offering its pages to Albert Luthuli of the ANC as early as 1961, and to the fight against colonialism, with Jawaharlal Nehru making the case for Indian independence as far back as 1938.</p>
+                
+                <p>In culture, too, A.B.T MOVEMENT blazed a trail, with George Orwell spending many years as literary editor, and writers from Upton Sinclair to HG Wells, Doris Lessing, George Bernard Shaw, and Seán O’Casey finding a home in its pages.
+                
+                <p>A.B.T MOVEMENT was relaunched as a print magazine and website with the support of Jacobin in 2023, and its new team is committed to reviving this great tradition on the British left. Our mission remains, as Michael Foot wrote on the magazine’s 21st birthday, “to sustain the old cause with the old weapons.”</p></strong>
+            </div><br>
+            <div class="masthead">
+                <h2>MASTHEAD</h2>
+                <hr>
+                <div class="masthead-container">
+                    <div class="left-column">
+                        <h3><strong>EDITOR 1</strong></h3><br>Ain Batrisya<br><br>
+                        <strong>No.phone:</strong><br>+60 10-709 2243<br><br>
+                        <strong>Email:</strong><br>ainbatrisyazman@icloud.com<br><br>
+                    </div>
+                    <div class="center-column">
+                        <h3><strong>EDITOR 2</strong></h3><br>Anusha Nair<br><br>
+                        <strong>No.phone:</strong><br>+60 11-2322 0901<br><br>
+                        <strong>Email:</strong><br>anushanair@gmail.com<br><br>
+                    </div>
+                    <div class="right-column">
+                        <h3><strong>EDITOR 3</strong></h3><br>Thivyaranthinie<br><br>
+                        <strong>No.phone:</strong><br>+60 17-243 2305<br><br>
+                        <strong>Email:</strong><br>Thivyaranthinie@gmail.com<br><br>
+                    </div>
+                </div>
+            </div>
+            
+            
+            </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>About the Campaign</h4>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Impact Stories</a></li>
+                    <li><a href="#">Partners & Allies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="#">Donate Now</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Attend Events</a></li>
+                    <li><a href="#">Petition & Advocacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources & News</h4>
+                <ul>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Educational Materials</a></li>
+                    <li><a href="#">Support Palestine</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Solidarity Campaign for Palestine. All Rights Reserved.</p>
+            <p>“Freedom for Palestine, Justice for All.”</p>
+        </div>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.getElementById("header");
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                header.style.top = "-70px";
+                navbar.style.display = "block";
+                navbar.style.top = "0";
+            } else {
+                header.style.top = "0";
+                navbar.style.display = "none";
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+
+</body>
+</html>

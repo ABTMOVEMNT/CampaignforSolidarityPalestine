@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Solidarity Campaign for Palestine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url("backgroundpic.png");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        /* Header Section */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Ensures items are spread out */
+            background: #6B3A1E;
+            padding: 10px 20px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-img {
+            height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        .solidarity-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        /* Styled Text for "Palestine" */
+        .palestine {
+            display: inline-block;
+        }
+
+        .black { color: black; }
+        .red { color: red; }
+        .white { color: white; }
+        .green { color: green; }
+
+        /* Search Container - Positioned to the Right */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: 170px; /* Pushes it to the right */
+        }
+
+        .search-box {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            width: 220px;
+        }
+
+        .search-btn {
+            background: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 12px;
+            margin-left: 5px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
+        .search-btn:hover {
+            background: #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-container {
+                margin-top: 10px;
+            }
+        }
+
+        .header-img {
+            height: 120px;
+            margin-right: 20px;
+            border-radius: 70px;
+            background-image: none;
+        }
+        
+        .solidarity-text {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Styled Text for "Solidarity Campaign for Palestine" */
+        .palestine {
+            display: inline-block;
+            letter-spacing: 0;
+        }
+
+        .black { color: black; }
+        .red { color: red; }
+        .white { color: white; }
+        .green { color: green; }
+        .BY { color:white; 
+            font-size:20px ;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;} 
+
+            .button-header a {
+            display: inline-block;
+            background: beige; /* Palestinian Red */
+            color: chocolate;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0px 4px 10px rgba(0.3, 0, 0, 0.2); /* Added shadow effect */
+        }
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: beige;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-center a {
+    font-family: serif;
+    text-decoration: none;
+    color: chocolate;
+    margin: 0 15px;
+    padding: 5px 10px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-right .button {
+    background: beige;
+    color: chocolate;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0.3, 0, 0, 0.2);
+}
+
+.nav-right .button:hover {
+    background: #555;
+    color: white;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #555;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+/* LEFT SIDE - JOIN AREA */
+.left-box {
+    width: 40%;
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 3px solid black;
+}
+
+.left-box h2 {
+    color: #d41920; /* Palestinian Red */
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Join Now Button */
+.join-btn {
+    display: inline-block;
+    background: #d41920; /* Palestinian Red */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    margin-top: 15px;
+    border: 2px solid black;
+}
+
+.join-btn:hover {
+    background: #a31215; /* Darker red */
+    transform: scale(1.05);
+}
+
+/* Terms & Conditions Section */
+.terms-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #d41920;
+    text-align: left;
+}
+
+/* Terms Title */
+.terms-section h3 {
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Terms List */
+.terms-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.terms-section ul li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.terms-section ul li::before {
+    content: "✔"; /* Checkmark Icon */
+    color: #007a3d; /* Palestinian Green */
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Terms Link */
+.terms-link {
+    display: inline-block;
+    color: #007a3d; /* Palestinian Green */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    text-align: center;
+    display: block;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+
+/* RIGHT SIDE CONTAINER */
+.right-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Slogan (Top Right) */
+.slogan-box {
+    width: 90%;
+    text-align: center;
+    background: linear-gradient(90deg, #007a3d, white, #ce1126);
+    padding: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 3px solid black;
+}
+
+.slogan-box h2 {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif; /* Or any strong, bold font */
+}
+
+/* DETAILS & IMAGE CONTAINER */
+.details-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Details Box (Right Below Slogan) */
+.details-box {
+    width: 55%;
+    background: white;
+    padding: 30px;
+    text-align:center;
+    border-radius: 8px;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Box (Beside Details) */
+.image-box {
+    width: 45%;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-box img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.main-content {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .left-box, .right-container {
+            flex: 1;
+            padding: 20px;
+        }
+        .left-box h2, .slogan-box h2 {
+            color: #d9534f;
+        }
+        .join-btn, .terms-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #d9534f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .join-btn:hover, .terms-link:hover {
+            background: #c9302c;
+        }
+        .terms-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 5px solid #d9534f;
+        }
+        .terms-section ul {
+            padding-left: 20px;
+        }
+        .terms-section li {
+            margin-bottom: 10px;
+        }
+        .slogan-box {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .details-image-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+        .details-box {
+            flex: 1;
+        }
+        .details-box ul {
+            padding-left: 20px;
+        }
+        .image-box {
+            flex: 1;
+            text-align: center;
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+
+        .footer {
+            background: #1b1d21;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background: #d41920;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bbbbbb;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            transition: 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 8px;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            transition: 0.5s ease;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: #d41920;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            padding: 15px 0;
+            background: #111;
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+
+
+<body>
+  <!-- Header -->
+  <header class="header-container">
+    <img src="logoo.jpg" class="header-img">
+    <div class="solidarity-text">
+        <span class="white">SOLIDARITY CAMPAIGN FOR </span>
+        <span class="palestine">
+            <span class="white">P</span>
+            <span class="white">A</span>
+            <span class="red">L</span>
+            <span class="red">E</span>
+            <span class="black">S</span>
+            <span class="black">T</span>
+            <span class="black">I</span>
+            <span class="green">N</span>
+            <span class="green">E</span>
+        </span>
+        <br>
+        <span class="BY">by A.B.T MOVEMENT </span>
+    </div>
+     <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search...">
+        <button class="search-btn">🔍</button>
+    </div>
+</header>
+
+
+<nav>
+    <div class="nav-center">
+        <a href="homepage.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="Get involved.html">Get Involved</a>
+        <a href="History Page.html">History</a>
+        <a href="about.html">About us</a>
+    </div>
+    <div class="nav-right">
+        <a href="Log In.html" class="button">LOG IN</a>
+        <a href="Join Us.html" class="button">JOIN US</a>
+    </div>
+</nav>
+
+    <br><br><br>
+    <div class="main-content">
+        <!-- LEFT SIDE - JOIN AREA -->
+        <div class="left-box">
+            <h2>JOIN THE MOVEMENT</h2>
+            <p>Be part of the change! Sign up now and support Solidarity Palestine.</p>
+            <a href="Join Us.html" target="_blank" class="join-btn">JOIN NOW</a>
+    
+            <div class="terms-section">
+                <h3>Terms & Conditions</h3>
+                <ul>
+                    <li><strong>Respect for Campaign Objectives:</strong> Align with the campaign’s mission and goals.</li>
+                    <li><strong>Non-Commercial Participation:</strong> No personal or commercial gain from campaign activities.</li>
+                    <li><strong>Adherence to Code of Conduct:</strong> Maintain respectful behavior; avoid hate speech or violence.</li>
+                    <li><strong>Compliance with Legal & Organizational Rules:</strong> Follow local laws and campaign guidelines.</li>
+                    <li><strong>Peaceful & Non-Violent Engagement:</strong> Support must be expressed lawfully and peacefully.</li>
+                    <li><strong>Confidentiality & Data Protection:</strong> Respect privacy policies; avoid unauthorized data sharing.</li>
+                    <li><strong>No Unauthorized Representations:</strong> Cannot speak on behalf of the campaign without permission.</li>
+                    <li><strong>Commitment to Humanitarian Principles:</strong> Prioritize the dignity and welfare of affected individuals.</li>
+                </ul>
+                <a href="https://example.com/terms" target="_blank" class="terms-link">Read Full Terms & Conditions</a>
+            </div>
+        </div>
+    
+        <!-- RIGHT SIDE CONTENT -->
+        <div class="right-container">
+            <!-- SLOGAN BOX -->
+            <div class="slogan-box">
+                <h2><i>"Together We Rise for Palestine!"</i></h2>
+            </div>
+    
+            <!-- DETAILS & IMAGE ROW -->
+            <div class="details-image-container">
+                <div class="details-box">
+                    <h3>HOW TO GET INVOLVED?</h3>
+                    <p>Join our mission to support Palestine by taking part in impactful activities:</p>
+                    <ul>
+                        <li>📢 Attend peaceful rallies & awareness campaigns.</li>
+                        <li>💰 Donate to humanitarian relief efforts.</li>
+                        <li>🖊 Sign petitions advocating for human rights.</li>
+                        <li>📲 Spread awareness through social media & events.</li>
+                        <li>🎗 Volunteer in charity drives and fundraisers.</li>
+                    </ul>
+                </div>
+                
+                <!-- IMAGE BOX -->
+                <div class="image-box">
+                    <img src="bgimg.jpg" alt="Campaign Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>About the Campaign</h4>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Impact Stories</a></li>
+                    <li><a href="#">Partners & Allies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="#">Donate Now</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Attend Events</a></li>
+                    <li><a href="#">Petition & Advocacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources & News</h4>
+                <ul>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Educational Materials</a></li>
+                    <li><a href="#">Support Palestine</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Solidarity Campaign for Palestine. All Rights Reserved.</p>
+            <p>“Freedom for Palestine, Justice for All.”</p>
+        </div>
+    </footer>
+
+</body>
+</html>

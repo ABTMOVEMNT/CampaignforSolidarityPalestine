@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspage</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* General Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url("backgroundpic.png");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Header Section */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Ensures items are spread out */
+            background: #6B3A1E;
+            padding: 10px 20px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-img {
+            height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        .solidarity-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        /* Styled Text for "Palestine" */
+        .palestine {
+            display: inline-block;
+        }
+
+        .black { color: black; }
+        .red { color: red; }
+        .white { color: white; }
+        .green { color: green; }
+
+        /* Search Container - Positioned to the Right */
+        .search-container {
+            display: 180;
+            align-items: center;
+            margin-left: auto; /* Pushes it to the right */
+        }
+
+        .search-box {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            width: 220px;
+        }
+
+        .search-btn {
+            background: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 12px;
+            margin-left: 5px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
+        .search-btn:hover {
+            background: #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-container {
+                margin-top: 10px;
+            }
+        }
+
+        .header-img {
+            height: 120px;
+            margin-right: 20px;
+            border-radius: 70px;
+            background-image: none;
+        }
+        
+        .solidarity-text {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Styled Text for "Solidarity Campaign for Palestine" */
+        .palestine {
+            display: inline-block;
+            letter-spacing: 0;
+        }
+
+        .black { color: black; }
+        .red { color: red; }
+        .white { color: white; }
+        .green { color: green; }
+        .BY { color:white; 
+            font-size:20px ;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        } 
+        
+            .button-header a {
+            display: inline-block;
+            background: beige; /* Palestinian Red */
+            color: chocolate;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0px 4px 10px rgba(0.3, 0, 0, 0.2); /* Added shadow effect */
+            margin-left: 250px;
+        }
+        /* Navigation Bar */
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: beige;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-center a {
+    font-family: serif;
+    text-decoration: none;
+    color: chocolate;
+    margin: 0 15px;
+    padding: 5px 10px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-right .button {
+    background: beige;
+    color: chocolate;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0.3, 0, 0, 0.2);
+}
+
+.nav-right .button:hover {
+    background: #555;
+    color: white;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #555;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+        /* Main Content Layout */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+            gap: 20px;
+            flex: 1; /* Push footer down */
+        }
+
+        /* News Section */
+        .news-section {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .news-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .clipping {
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .clipping-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .news-item h3 {
+            font-size: 18px;
+            color: #d41920;
+            margin-top: 10px;
+        }
+        .news-item p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Poster Section */
+        .poster-section {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .poster-section img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Footer Styling */
+.footer {
+    background: #1b1d21;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 2px;
+    background: #d41920;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: white;
+    padding-left: 8px;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    transition: 0.5s ease;
+}
+
+.social-links a:hover {
+    background: white;
+    color: #d41920;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding: 15px 0;
+    background: #111;
+    color: #bbbbbb;
+    margin-top: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-container">
+        <img src="logoo.jpg" class="header-img">
+        <div class="solidarity-text">
+            <span class="white">SOLIDARITY CAMPAIGN FOR </span>
+            <span class="palestine">
+                <span class="white">P</span>
+                <span class="white">A</span>
+                <span class="red">L</span>
+                <span class="red">E</span>
+                <span class="black">S</span>
+                <span class="black">T</span>
+                <span class="black">I</span>
+                <span class="green">N</span>
+                <span class="green">E</span>
+            </span>
+            <br>
+            <span class="BY">by A.B.T MOVEMENT </span>
+        </div><br><br><br>
+         <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search...">
+            <button class="search-btn">🔍</button>
+        </div>
+        
+    </header>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-center">
+            <a href="homepage.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="Get involved.html">Get Involved</a>
+            <a href="History Page.html">History</a>
+            <a href="about.html">About us</a>
+        </div>
+        <div class="nav-right">
+            <a href="Log In.html" class="button">LOG IN</a>
+            <a href="Join Us.html" class="button">JOIN US</a>
+        </div>
+    </nav>
+    
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- News Clipping Section -->
+        <div class="news-section">
+            <div class="news-item">
+                <div class="clipping">
+                    <img src="pic1.jpg" alt="news clipping" class="clipping-img">
+                </div>
+                <h3>Global Protests Demand Ceasefire</h3>
+                <p><strong>July 28, 2014</strong></p>
+                <p>A diverse group of celebrities, artists, and activists, including American Jews and Palestinians, have joined forces to speak 
+                    out against the ongoing violence in Gaza. Their efforts were highlighted in a powerful video released today, calling for an immediate
+                     ceasefire and urging global leaders to take decisive action. The protests, held in major cities worldwide, saw thousands marching in solidarity
+                      with the Palestinian people, chanting slogans and holding banners demanding justice, peace, and humanitarian aid. Many demonstrators emphasized the 
+                    importance of a long-term political solution to ensure lasting peace in the region.</p>
+            </div>
+
+            <div class="news-item">
+                <div class="clipping">
+                    <img src= "pic 2.jpg" alt="news clipping" class="clipping-img">
+                </div>
+                <h3>Humanitarian Aid Reaches Gaza</h3>
+                <p><strong>October 5, 2024</strong></p>
+                <p>Tens of thousands of protesters across the globe marched over the weekend, demanding a ceasefire in Gaza and Lebanon as the conflict continued to escalate.
+                     Amid the ongoing violence, humanitarian organizations have stepped up their efforts to deliver essential supplies to affected areas. Convoys carrying food, 
+                     medicine, and clean water successfully entered Gaza today, despite numerous challenges posed by the blockade. Volunteers on the ground described the dire 
+                     situation faced by civilians, many of whom have been displaced due to airstrikes and military operations. International aid
+                     agencies have called for greater support from the global community to ensure the sustained delivery of resources and medical assistance...</p>
+            </div>
+
+            <div class="news-item">
+                <div class="clipping">
+                    <img src="pic3.jpg" alt="news clipping" class="clipping-img">
+                </div>
+                <h3>Artists and Activists Unite</h3>
+                <p><strong> December 10, 2024</strong></p>
+                <p>A joint United Nations convoy has successfully delivered urgently needed food, medical supplies, and shelter materials
+                     to communities in southern and central Gaza today. The aid effort was made possible through collaboration between international 
+                     humanitarian organizations, local NGOs, and grassroots activist groups. Alongside these relief efforts, renowned artists and musicians from 
+                     around the world have come together to raise awareness through creative campaigns, concerts, and exhibitions. Many have used their platforms to 
+                     advocate for an end to violence and promote messages of peace and resilience. The initiative aims not only to provide immediate relief but also
+                     to inspire solidarity and long-term support for rebuilding efforts in Gaza.</p>
+            </div>
+        </div>
+
+        <!-- Poster Section -->
+        <div class="poster-section">
+            <img src="poster1.jpg" alt="Palestine Solidarity Poster">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>About the Campaign</h4>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Impact Stories</a></li>
+                    <li><a href="#">Partners & Allies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="#">Donate Now</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Attend Events</a></li>
+                    <li><a href="#">Petition & Advocacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources & News</h4>
+                <ul>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Educational Materials</a></li>
+                    <li><a href="#">Support Palestine</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Solidarity Campaign for Palestine. All Rights Reserved.</p>
+            <p>“Freedom for Palestine, Justice for All.”</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
